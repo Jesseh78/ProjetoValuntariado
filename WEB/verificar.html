@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voluntários Cadastrados</title>
+    <link rel="stylesheet" href="../CSS/">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="Js/formulario.js" defer></script>
+</head>
+<body>
+    <div class="menu_nav">
+        <nav class="menu">
+            <a href="index.html">Home</a>
+            <a href="formulario.html">Formulário</a>
+            <a href="verificar.html">Verificar registros</a>
+        </nav>
+    </div>
+    <main>
+        <h2>Lista de Voluntários</h2>
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Telefone</th>
+                    <th>Interesse</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela-voluntarios"></tbody>
+        </table>
+    </main>
+    <script>
+        // Garante que a função será chamada somente depois que o script externo carregar
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof listarVoluntarios === 'function') {
+                listarVoluntarios();
+            }
+        });
+    </script>
+</body>
+</html>
