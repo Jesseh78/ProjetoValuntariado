@@ -148,3 +148,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         listarVoluntarios();
     }
 });
+
+//VALIDA O CAMPO NUMERO TELEFONE
+document.getElementById("formulario").addEventListener("submit", function(event) {
+const telefone = document.getElementById("telefone").value;
+const regex = /^[0-9]{10,11}$/;
+
+if (!regex.test(telefone)) {
+    alert("Por favor, digite um número de telefone válido (apenas números, com 10 ou 11 dígitos).");
+    event.preventDefault(); // impede o envio do formulário
+}
+});
