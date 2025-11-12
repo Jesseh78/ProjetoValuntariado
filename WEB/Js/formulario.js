@@ -163,10 +163,10 @@ if (!telefoneRegex.test(telefone)) {
 // valida campo nome
 document.getElementById("formulario").addEventListener("submit", function(event){
 const nome = document.getElementById("nome").value;
-const nomeRegex = /A-Za-zà-ÿ\s]{4,}$/;
+const nomeRegex = /^[A-Za-zÀ-ÿ\s]{4,}$/;
 
 if(!nomeRegex.test(nome)){
-    
+    alert("Por favor, digite um nome válido (apenas letras, com no mínimo 4 caracteres).");
     event.preventDefault(); // impede o envio do formulário
 }
 });
