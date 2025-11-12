@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 //VALIDA O CAMPO NUMERO TELEFONE
 document.getElementById("formulario").addEventListener("submit", function(event) {
 const telefone = document.getElementById("telefone").value;
-const telegoneRegex = /^[0-9]{10,11}$/;
+const telefoneRegex = /^[0-9]{10,11}$/;
 
 if (!telefoneRegex.test(telefone)) {
     alert("Por favor, digite um número de telefone válido (apenas números, com 10 ou 11 dígitos).");
